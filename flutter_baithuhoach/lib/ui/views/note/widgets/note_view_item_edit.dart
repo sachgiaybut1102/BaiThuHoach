@@ -23,25 +23,52 @@ class NoteViewItemEdit extends ViewModelWidget<NoteViewModel> {
         ],
       ),
       body: Form(
-          key: _formKey,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextFormField(
-                  decoration: InputDecoration(
-                    hintText: 'Nhập tiêu đề',
-                  ),
-                  controller: model.editingControllerTitle),
-              SizedBox(height: 20),
-              TextFormField(
+        key: _formKey,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text(
+              'Họ',
+            ),
+            TextFormField(
                 decoration: InputDecoration(
-                  hintText: 'Nhập mô tả',
+                  hintText: 'Nhập họ',
                 ),
-                controller: model.editingControllerDesc,
-              )
-            ],
-          )),
+                controller: model.editingControllerLastName),
+            SizedBox(height: 20),
+            Text(
+              'Tên',
+            ),
+            TextFormField(
+              decoration: InputDecoration(
+                hintText: 'Nhập tên',
+              ),
+              controller: model.editingControllerName,
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Số điện thoại',
+            ),
+            TextFormField(
+              decoration: InputDecoration(
+                hintText: 'Nhập số điện thoại',
+              ),
+              controller: model.editingControllerPhoneNumber,
+            ),
+            SizedBox(height: 20),
+            Text(
+              'EMail',
+            ),
+            TextFormField(
+              decoration: InputDecoration(
+                hintText: 'Nhập email',
+              ),
+              controller: model.editingControllerEMail,
+            )
+          ],
+        ),
+      ),
     );
   }
 }

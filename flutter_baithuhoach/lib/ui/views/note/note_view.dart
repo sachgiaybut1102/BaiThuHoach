@@ -21,8 +21,8 @@ class NoteView extends StatelessWidget {
                     itemBuilder: (BuildContext context, int index) {
                       Note item = model.items[index];
                       return ListTile(
-                        title: Text(item.title),
-                        subtitle: Text(item.desc),
+                        title: Text(item.lastname),
+                        subtitle: Text(item.name),
                         onTap: () {
                           model.editingItem = item;
                           model.state = NoteViewState.itemView;

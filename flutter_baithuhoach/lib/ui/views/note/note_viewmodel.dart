@@ -38,8 +38,10 @@ class NoteViewModel extends BaseViewModel {
 
   Note editingItem;
 
-  var editingControllerTitle = TextEditingController();
-  var editingControllerDesc = TextEditingController();
+  var editingControllerLastName = TextEditingController();
+  var editingControllerName = TextEditingController();
+  var editingControllerPhoneNumber = TextEditingController();
+  var editingControllerEMail = TextEditingController();
 
   ///
   var repo = NoteRepository();
@@ -57,18 +59,22 @@ class NoteViewModel extends BaseViewModel {
 
   void addItem() {
     var timestamp = DateTime.now();
-    var title = timestamp.millisecondsSinceEpoch.toString();
-    var desc = timestamp.toLocal().toString();
+    var lastname = '';
+    var name = '';
+    var phonenumber = '';
+    var email = '';
 
-    var item = Note(title, desc);
+    var item = Note(lastname, name, phonenumber, email);
     repo.insert(item).then((value) {
       reloadItems();
     });
   }
 
   void updateItem() {
-    editingControllerTitle.text = editingItem.title;
-    editingControllerDesc.text = editingItem.desc;
+    editingControllerLastName.text = editingItem.lastname;
+    editingControllerName.text = editingItem.name;
+    editingControllerPhoneNumber.text = editingItem.phonenumber;
+    editingControllerEMail.text = editingItem.emailaddress;
     state = NoteViewState.updateView;
   }
 

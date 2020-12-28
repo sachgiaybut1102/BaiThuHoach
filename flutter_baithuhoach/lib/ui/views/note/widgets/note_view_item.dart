@@ -20,8 +20,8 @@ class NoteViewItem extends ViewModelWidget<NoteViewModel> {
       ),
       body: Center(
         child: ListTile(
-          title: Text(model.editingItem.title),
-          subtitle: Text(model.editingItem.desc),
+          title: Text(model.editingItem.lastname),
+          subtitle: Text(model.editingItem.name),
         ),
       ),
     );
