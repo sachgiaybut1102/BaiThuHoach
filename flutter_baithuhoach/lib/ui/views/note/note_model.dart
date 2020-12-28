@@ -21,8 +21,10 @@ class Note {
   /// trong CSDL mà không cần khởi tạo nên nó là static để dễ sử dụng.
   static String get createTable =>
       'CREATE TABLE $tableName(`id` TEXT PRIMARY KEY,'
-      ' `title` TEXT,'
-      ' `desc` TEXT,'
+      ' `lastname` TEXT,'
+      ' `name` TEXT,'
+      ' `phonenumber` TEXT,'
+      ' `email` TEXT,'
       ' `isDeleted` INTEGER DEFAULT 0)';
 
   /// Phương thức này được thiết lập để tạo nên danh sách các ghi chú
@@ -39,11 +41,11 @@ class Note {
   /// Hàm tạo có tên, đây là một hàm tạo từ đối số là dữ liệu đưa vào
   /// dưới dạng Map
   Note.fromMap(Map data)
-      : id = '', //data['id'],
-        lastname = '1', //,data['title'],
-        name = data['desc'],
-        phonenumber = '', //data['phonenumber'],
-        emailaddress = '', //data['email'],
+      : id = data['id'],
+        lastname = data['lastname'],
+        name = data['name'],
+        phonenumber = data['phonenumber'],
+        emailaddress = data['email'],
         isDeleted = data['isDeleted'] == 1 ? true : false;
 
   /// Phương thức của đối tượng, nó cho phép tạo ra dữ liệu dạng Map từ

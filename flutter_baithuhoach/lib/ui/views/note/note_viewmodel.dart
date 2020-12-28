@@ -59,12 +59,13 @@ class NoteViewModel extends BaseViewModel {
 
   void addItem() {
     var timestamp = DateTime.now();
-    var lastname = '';
+    var lastname = 'mới';
     var name = '';
     var phonenumber = '';
     var email = '';
 
     var item = Note(lastname, name, phonenumber, email);
+    print(item);
     repo.insert(item).then((value) {
       reloadItems();
     });
