@@ -23,7 +23,7 @@ class LocalRepository {
 
   Future _init() async {
     var databasesPath = await getDatabasesPath();
-    String path = join(databasesPath, 'note_app.db');
+    String path = join(databasesPath, 'profile_app.db');
 
     _db = await openDatabase(path, version: 1,
         onCreate: (Database db, int version) async {

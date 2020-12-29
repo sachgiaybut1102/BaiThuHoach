@@ -8,7 +8,7 @@ import 'note_model.dart';
 enum NoteViewState { listView, itemView, insertView, updateView }
 
 class NoteViewModel extends BaseViewModel {
-  final title = 'Note View Model';
+  final title = 'Quản lý danh bạ';
 
   /// Danh sách các bản ghi được load bất đồng bộ bên trong view model,
   /// khi load thành công thì thông báo đến view để cập nhật trạng thái

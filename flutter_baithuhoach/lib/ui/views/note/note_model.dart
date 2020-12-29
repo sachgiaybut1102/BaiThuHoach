@@ -52,8 +52,10 @@ class Note {
   /// dữ liệu của một đối tượng ghi chú.
   Map<String, dynamic> toMap() => {
         'id': id,
-        'title': lastname,
-        'desc': name,
+        'lastname': lastname,
+        'name': name,
+        'phonenumber': phonenumber,
+        'email': emailaddress,
         'isDeleted': isDeleted ? 1 : 0,
       };
 }

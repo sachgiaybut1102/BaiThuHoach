@@ -10,7 +10,7 @@ class NoteViewItemEdit extends ViewModelWidget<NoteViewModel> {
   Widget build(BuildContext context, model) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cập nhật ${model.editingItem.id}'),
+        title: Text('Cập nhật'),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () => model.state = NoteViewState.listView,
